@@ -1,362 +1,200 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Jual Tanah Surabaya | Tanah Murah di Surabaya Timur MERR</title>
-<meta name="description" content="Investasi tanah murah di Surabaya Timur kawasan MERR. Aset premium dengan legalitas inkracht, perlindungan institusional, dan potensi pengembangan bernilai tinggi.">
-<meta name="keywords" content="tanah murah di surabaya timur, jual tanah surabaya, investasi tanah merr, lahan komersial surabaya, tanah strategis surabaya timur">
-<meta name="author" content="AMDF">
+    <title>Jual Tanah Surabaya | Tanah Murah di Surabaya Timur MERR</title>
+    <meta name="description" content="Investasi tanah murah di Surabaya Timur kawasan MERR. Aset premium dengan legalitas inkracht, perlindungan institusional, dan potensi pengembangan bernilai tinggi.">
+    <meta name="keywords" content="tanah murah di surabaya timur, jual tanah surabaya, investasi tanah merr, lahan komersial surabaya, tanah strategis surabaya timur">
+    <meta name="author" content="AMDF">
 
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
-<style>
-/* CSS Variables untuk Transisi Tema (Dark/Light) */
-:root {
-    --primary: #00F5FF;
-    --secondary: #6D5DFB;
-    --bg-body: #050b14;
-    --bg-card: rgba(255, 255, 255, 0.03);
-    --text-main: #ffffff;
-    --text-muted: #94a3b8;
-    --border: rgba(255, 255, 255, 0.08);
-    --nav-bg: rgba(5, 11, 20, 0.7);
-    --gradient-1: rgba(0, 245, 255, 0.05);
-    --gradient-2: rgba(109, 93, 251, 0.05);
-    --btn-hover: rgba(255,255,255,0.05);
-    --btn-text: #ffffff;
-}
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 
-.light-mode {
-    --primary: #00818a; /* Warna cyan yang lebih gelap agar terbaca di background terang */
-    --secondary: #4a3aff;
-    --bg-body: #f8fafc;
-    --bg-card: #ffffff;
-    --text-main: #0f172a;
-    --text-muted: #475569;
-    --border: rgba(0, 0, 0, 0.1);
-    --nav-bg: rgba(248, 250, 252, 0.85);
-    --gradient-1: rgba(0, 129, 138, 0.05);
-    --gradient-2: rgba(74, 58, 255, 0.05);
-    --btn-hover: rgba(0,0,0,0.05);
-    --btn-text: #0f172a;
-}
+    <style>
+        :root {
+            --primary: #00F5FF;
+            --secondary: #6D5DFB;
+            --bg-body: #050b14;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --text-main: #ffffff;
+            --text-muted: #94a3b8;
+            --border: rgba(255, 255, 255, 0.08);
+            --nav-bg: rgba(5, 11, 20, 0.7);
+            --gradient-1: rgba(0, 245, 255, 0.05);
+            --gradient-2: rgba(109, 93, 251, 0.05);
+            --btn-hover: rgba(255,255,255,0.05);
+            --btn-text: #ffffff;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    /* Efek transisi halus saat ganti tema */
-    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
-}
+        .light-mode {
+            --primary: #00818a;
+            --secondary: #4a3aff;
+            --bg-body: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --border: rgba(0, 0, 0, 0.1);
+            --nav-bg: rgba(248, 250, 252, 0.85);
+            --gradient-1: rgba(0, 129, 138, 0.05);
+            --gradient-2: rgba(74, 58, 255, 0.05);
+            --btn-hover: rgba(0,0,0,0.05);
+            --btn-text: #0f172a;
+        }
 
-html {
-    scroll-behavior: smooth;
-}
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+        }
 
-body {
-    background: 
-        radial-gradient(circle at 10% 20%, var(--gradient-1) 0%, transparent 50%),
-        radial-gradient(circle at 90% 80%, var(--gradient-2) 0%, transparent 50%),
-        var(--bg-body);
-    color: var(--text-main);
-    min-height: 100vh;
-    overflow-x: hidden;
-}
+        html { scroll-behavior: smooth; }
 
-/* Switcher Tema */
-.theme-switch {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 1000;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    background: var(--primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease;
-}
+        body {
+            background: 
+                radial-gradient(circle at 10% 20%, var(--gradient-1) 0%, transparent 50%),
+                radial-gradient(circle at 90% 80%, var(--gradient-2) 0%, transparent 50%),
+                var(--bg-body);
+            color: var(--text-main);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-.theme-switch:hover {
-    transform: scale(1.1);
-}
+        /* Switcher Visual */
+        .theme-switch {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1000;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+        .theme-switch:hover { transform: scale(1.1); }
 
-/* NAVBAR UPGRADE */
-.navbar {
-    width: 100%;
-    padding: 20px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    z-index: 999;
-    backdrop-filter: blur(20px);
-    background: var(--nav-bg);
-    border-bottom: 1px solid var(--border);
-}
+        .navbar {
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0; z-index: 999;
+            backdrop-filter: blur(20px);
+            background: var(--nav-bg);
+            border-bottom: 1px solid var(--border);
+        }
 
-.logo {
-    font-size: 22px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-}
+        .logo { font-size: 22px; font-weight: 800; letter-spacing: -0.5px; }
+        .logo span { color: var(--primary); text-shadow: 0 0 15px rgba(0, 245, 255, 0.3); }
 
-.logo span {
-    color: var(--primary);
-    text-shadow: 0 0 15px rgba(0, 245, 255, 0.3);
-}
+        .nav-links { display: flex; gap: 25px; }
+        .nav-links a {
+            color: var(--text-muted); text-decoration: none;
+            font-size: 13px; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 1px; transition: .3s;
+        }
+        .nav-links a:hover { color: var(--primary); }
 
-.nav-links {
-    display: flex;
-    gap: 25px;
-}
+        section { padding: 140px 8% 80px; }
 
-.nav-links a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: .3s;
-}
+        .tag {
+            display: inline-block; padding: 8px 16px; border-radius: 4px;
+            background: rgba(0,245,255,.1); border-left: 3px solid var(--primary);
+            color: var(--primary); font-size: 12px; font-weight: 700;
+            letter-spacing: 1.5px; margin-bottom: 25px;
+        }
 
-.nav-links a:hover {
-    color: var(--primary);
-}
+        .hero h1 {
+            font-size: 68px; font-weight: 800; line-height: 1.1; margin-bottom: 25px;
+            letter-spacing: -2px; background: linear-gradient(to right, var(--text-main) 60%, var(--primary));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+        }
 
-/* SECTION GLOBAL */
-section {
-    padding: 140px 8% 80px;
-}
+        .hero p { color: var(--text-muted); font-size: 18px; line-height: 1.8; margin-bottom: 35px; }
 
-/* HERO */
-.hero-grid {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 60px;
-    align-items: center;
-}
+        .hero-image {
+            height: 580px; border-radius: 40px;
+            background: url('img/tanah-utama.jpg') center/cover no-repeat;
+            position: relative; border: 1px solid var(--border);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
 
-.tag {
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 4px;
-    background: rgba(0,245,255,.1);
-    border-left: 3px solid var(--primary);
-    color: var(--primary);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    margin-bottom: 25px;
-}
+        .map-box {
+            width: 100%; height: 450px; border-radius: 30px;
+            overflow: hidden; border: 1px solid var(--border); margin-top: 40px;
+        }
 
-.hero h1 {
-    font-size: 68px;
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 25px;
-    letter-spacing: -2px;
-    background: linear-gradient(to right, var(--text-main) 60%, var(--primary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+        .section-title { font-size: 42px; font-weight: 700; margin-bottom: 20px; letter-spacing: -1px; }
+        .section-desc { color: var(--text-muted); line-height: 1.8; margin-bottom: 50px; font-size: 18px; max-width: 800px; }
 
-.hero p {
-    color: var(--text-muted);
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 35px;
-}
+        .doc-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(320px,1fr)); gap: 30px; }
 
-.hero-image {
-    height: 580px;
-    border-radius: 40px;
-    background: url('img/tanah-utama.jpg') center/cover no-repeat;
-    position: relative;
-    border: 1px solid var(--border);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-}
+        .doc-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 30px; padding: 10px; cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .doc-card:hover { transform: translateY(-12px); border-color: var(--primary); }
 
-/* MAP STYLING */
-.map-box {
-    width: 100%;
-    height: 450px;
-    border-radius: 30px;
-    overflow: hidden;
-    border: 1px solid var(--border);
-    margin-top: 40px;
-}
+        .doc-preview { width: 100%; height: 380px; object-fit: cover; border-radius: 22px; margin-bottom: 20px; }
 
-/* CARDS */
-.section-title {
-    font-size: 42px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    letter-spacing: -1px;
-}
+        .doc-content { padding: 15px 15px 25px; }
+        .doc-content h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+        .doc-content p { color: var(--text-muted); line-height: 1.6; margin-bottom: 20px; font-size: 15px; }
 
-.section-desc {
-    color: var(--text-muted);
-    line-height: 1.8;
-    margin-bottom: 50px;
-    font-size: 18px;
-    max-width: 800px;
-}
+        .open-btn {
+            display: block; width: 100%; text-align: center; padding: 14px;
+            border-radius: 15px; background: var(--btn-hover);
+            border: 1px solid var(--border); color: var(--btn-text);
+            font-size: 14px; font-weight: 600; transition: .3s;
+        }
+        .doc-card:hover .open-btn { background: var(--primary); color: #fff; border-color: var(--primary); }
 
-.doc-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
-    gap: 30px;
-}
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .contact-box { padding: 50px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 35px; }
+        .contact-item { padding: 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+        .contact-item:last-child { border: none; }
+        .contact-label { color: var(--text-muted); font-size: 14px; font-weight: 600; }
 
-.doc-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 30px;
-    padding: 10px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    cursor: pointer;
-}
+        /* FIX FONT NOMOR HP */
+        .contact-value { font-size: 18px; font-weight: 700; }
+        .contact-value a { color: var(--primary); text-decoration: none; }
 
-.doc-card:hover {
-    transform: translateY(-12px);
-    border-color: var(--primary);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-}
+        footer { padding: 60px 8%; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 13px; letter-spacing: 1px; }
 
-.doc-preview {
-    width: 100%;
-    height: 380px;
-    object-fit: cover;
-    border-radius: 22px;
-    margin-bottom: 20px;
-}
+        /* RESPONSIVE */
+        @media(max-width:1024px) {
+            .hero-grid, .contact-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 48px; }
+            .nav-links { display: none; }
+        }
 
-.doc-content {
-    padding: 15px 15px 25px;
-}
-
-.doc-content h3 {
-    font-size: 22px;
-    font-weight: 700;
-    margin-bottom: 12px;
-}
-
-.doc-content p {
-    color: var(--text-muted);
-    line-height: 1.6;
-    margin-bottom: 20px;
-    font-size: 15px;
-}
-
-.open-btn {
-    display: block;
-    width: 100%;
-    text-align: center;
-    padding: 14px;
-    border-radius: 15px;
-    background: var(--btn-hover);
-    border: 1px solid var(--border);
-    color: var(--btn-text);
-    font-size: 14px;
-    font-weight: 600;
-    transition: .3s;
-}
-
-.doc-card:hover .open-btn {
-    background: var(--primary);
-    color: #ffffff; /* Pastikan teks tombol putih saat hover */
-    border-color: var(--primary);
-}
-
-/* CONTACT BOX */
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-
-.contact-box {
-    padding: 50px;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: 35px;
-}
-
-.contact-item {
-    padding: 20px;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.contact-item:last-child { border: none; }
-
-.contact-label {
-    color: var(--text-muted);
-    font-size: 14px;
-    font-weight: 600;
-}
-
-/* PERBAIKAN UKURAN FONT NOMOR HP */
-.contact-value {
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.contact-value a {
-    color: var(--primary);
-    text-decoration: none;
-}
-
-/* FOOTER */
-footer {
-    padding: 60px 8%;
-    border-top: 1px solid var(--border);
-    text-align: center;
-    color: var(--text-muted);
-    font-size: 13px;
-    letter-spacing: 1px;
-}
-
-/* RESPONSIVE */
-@media(max-width:1024px) {
-    .hero-grid, .contact-grid { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 48px; }
-    .nav-links { display: none; }
-}
-
-@media(max-width:600px) {
-    /* Mencegah teks nomor HP bertumpuk di layar kecil */
-    .contact-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-    }
-    .contact-value {
-        font-size: 16px; /* Mengecilkan ukuran font di mobile */
-        word-break: break-word; /* Mencegah overflow */
-    }
-    .contact-box {
-        padding: 30px;
-    }
-}
-</style>
+        @media(max-width:600px) {
+            /* Perbaikan agar nomor HP tidak tumpuk */
+            .contact-item { flex-direction: column; align-items: flex-start; gap: 8px; }
+            .contact-value { font-size: 16px; word-break: break-word; }
+            .contact-box { padding: 30px; }
+            .hero h1 { font-size: 38px; }
+        }
+    </style>
 </head>
 <body>
 
-<div class="theme-switch" onclick="toggleTheme()" title="Ganti Tema Visual">
+<div class="theme-switch" onclick="toggleTheme()" title="Ganti Tema">
     <svg id="theme-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#050b14" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="5"></circle>
         <line x1="12" y1="1" x2="12" y2="3"></line>
@@ -410,7 +248,7 @@ footer {
         rangkaian bukti hukum yang saling terhubung mulai dari putusan pengadilan,
         proses eksekusi resmi, perlindungan institusional negara, validitas transaksi,
         hingga finalisasi administratif di BPN dan Bapenda.
-        Ini yang menjadikan aset ini sangat layak untuk investor besar yang mencari properti atau <strong>jual tanah surabaya</strong> yang aman.
+        Ini yang menjadikan aset ini sangat layak untuk investor besar yang mencari <strong>jual tanah surabaya</strong> yang terpercaya.
     </p>
 </section>
 
@@ -420,8 +258,7 @@ footer {
     <p class="section-desc">Visualisasi area MERR (Middle East Ring Road) Surabaya. Titik pusat pertumbuhan ekonomi baru dengan aksesibilitas terbaik ke gerbang tol dan pusat bisnis.</p>
     
     <div class="map-box">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3957.2402051459358!2d112.77797388885496!3d-7.326895600000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srsud%20eka%20candrarini!5e0!3m2!1sen!2sid!4v1776865943724!5m2!1sen!2sid" 
-        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="Peta Lokasi Tanah MERR Surabaya"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3957.2402051459358!2d112.77797388885496!3d-7.326895600000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srsud%20eka%20candrarini!5e0!3m2!1sen!2sid!4v1776865943724!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 </section>
 
@@ -432,7 +269,7 @@ footer {
 
     <div class="doc-grid">
         <div class="doc-card" onclick="openPDF('pdf/putusan-pn.pdf')">
-            <img src="preview/putusan-preview.jpg" class="doc-preview" alt="Preview Dokumen Putusan PN">
+            <img src="preview/putusan-preview.jpg" class="doc-preview">
             <div class="doc-content">
                 <h3>Putusan PN Surabaya</h3>
                 <p>Putusan PN No. 728/Pdt.G/2018 dengan status Inkracht. Hak telah diakui negara secara final dan memiliki kepastian hukum maksimal.</p>
@@ -441,7 +278,7 @@ footer {
         </div>
 
         <div class="doc-card" onclick="openPDF('pdf/amaning.pdf')">
-            <img src="preview/amaning-preview.jpg" class="doc-preview" alt="Preview Dokumen Penetapan Amaning">
+            <img src="preview/amaning-preview.jpg" class="doc-preview">
             <div class="doc-content">
                 <h3>Penetapan Amaning</h3>
                 <p>Penetapan No. 43.EKS.2019 membuktikan proses pengosongan lahan berjalan secara resmi melalui pengadilan.</p>
@@ -457,7 +294,7 @@ footer {
 
     <div class="doc-grid">
         <div class="doc-card" onclick="openPDF('pdf/dukungan-polri.pdf')">
-            <img src="preview/polri-preview.jpg" class="doc-preview" alt="Preview Dokumen Dukungan Polri">
+            <img src="preview/polri-preview.jpg" class="doc-preview">
             <div class="doc-content">
                 <h3>Mahkamah Agung & Mabes Polri</h3>
                 <p>Dukungan institusional dari MA dan Mabes Polri menjadi lapisan perlindungan penting terhadap risiko mafia tanah dan gangguan pihak luar.</p>
@@ -466,7 +303,7 @@ footer {
         </div>
 
         <div class="doc-card" onclick="openPDF('pdf/ijb.pdf')">
-            <img src="preview/ijb-preview.jpg" class="doc-preview" alt="Preview Dokumen IJB">
+            <img src="preview/ijb-preview.jpg" class="doc-preview">
             <div class="doc-content">
                 <h3>IJB & Validitas Transaksi</h3>
                 <p>Perikatan jual beli notariil memperkuat legal standing, profesionalisme transaksi, dan kesiapan due diligence investor.</p>
@@ -475,7 +312,7 @@ footer {
         </div>
 
         <div class="doc-card" onclick="openPDF('pdf/bapenda.pdf')">
-            <img src="preview/bapenda-preview.jpg" class="doc-preview" alt="Preview Dokumen Bapenda">
+            <img src="preview/bapenda-preview.jpg" class="doc-preview">
             <div class="doc-content">
                 <h3>Bapenda & Administrasi</h3>
                 <p>Progres administrasi perpajakan dan validasi tambahan berjalan lancar sebagai bentuk transparansi penuh.</p>
@@ -484,7 +321,7 @@ footer {
         </div>
 
         <div class="doc-card" onclick="openPDF('pdf/bpn.pdf')">
-            <img src="preview/bpn-preview.jpg" class="doc-preview" alt="Preview Dokumen BPN">
+            <img src="preview/bpn-preview.jpg" class="doc-preview">
             <div class="doc-content">
                 <h3>Finalisasi BPN</h3>
                 <p>Tahap validasi batas lahan dan sertifikasi formal sedang berjalan, meningkatkan nilai komersial aset secara signifikan.</p>
@@ -541,29 +378,21 @@ footer {
 </footer>
 
 <script>
-// Fungsi untuk membuka PDF
-function openPDF(path){
-    window.open(path, "_blank");
-}
+    function openPDF(path){ window.open(path, "_blank"); }
 
-// Fungsi untuk transisi Light/Dark Mode
-function toggleTheme() {
-    const body = document.body;
-    const icon = document.getElementById('theme-icon');
-    
-    body.classList.toggle('light-mode');
-    
-    // Ganti icon SVG matahari/bulan tergantung mode
-    if(body.classList.contains('light-mode')) {
-        // Ikon Bulan (Mode Terang sedang aktif, bisa ganti ke gelap)
-        icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
-        icon.setAttribute('stroke', '#ffffff');
-    } else {
-        // Ikon Matahari (Mode Gelap sedang aktif, bisa ganti ke terang)
-        icon.innerHTML = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
-        icon.setAttribute('stroke', '#050b14');
+    function toggleTheme() {
+        const body = document.body;
+        const icon = document.getElementById('theme-icon');
+        body.classList.toggle('light-mode');
+        
+        if(body.classList.contains('light-mode')) {
+            icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>';
+            icon.setAttribute('stroke', '#ffffff');
+        } else {
+            icon.innerHTML = '<circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>';
+            icon.setAttribute('stroke', '#050b14');
+        }
     }
-}
 </script>
 
 </body>
