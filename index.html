@@ -143,17 +143,45 @@
         }
         .doc-card:hover .open-btn { background: var(--primary); color: #fff; border-color: var(--primary); }
 
-        .contact-grid { 
+       .contact-grid { 
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Otomatis menyesuaikan jumlah box */
-    gap: 30px; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
 }
-        .contact-box { padding: 50px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 35px; }
-        .contact-item { padding: 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
-        .contact-item:last-child { border: none; }
-        .contact-label { color: var(--text-muted); font-size: 14px; font-weight: 600; }
-        .contact-value { font-size: 18px; font-weight: 700; }
-        .contact-value a { color: var(--primary); text-decoration: none; }
+
+.contact-box { 
+    padding: 30px; /* Padding dikurangi sedikit agar lebih lega di mobile */
+    background: var(--bg-card); 
+    border: 1px solid var(--border); 
+    border-radius: 25px; 
+}
+
+.contact-item { 
+    padding: 15px 0; 
+    border-bottom: 1px solid var(--border); 
+    display: flex; 
+    flex-wrap: wrap; /* KUNCI: Agar tulisan pindah ke bawah jika tidak cukup ruang */
+    justify-content: space-between; 
+    align-items: center;
+    gap: 10px; /* Jarak antara label dan isi saat bertumpuk */
+}
+
+/* Khusus tampilan layar HP (Mobile) */
+@media (max-width: 480px) {
+    .contact-item {
+        flex-direction: column; /* Paksa tumpuk vertikal di layar sangat kecil */
+        align-items: flex-start; /* Rata kiri */
+    }
+    
+    .contact-value {
+        font-size: 16px; /* Mengecilkan sedikit font agar tidak overflow */
+        word-break: break-all; /* Mencegah email panjang merusak layout */
+    }
+}
+
+.contact-item:last-child { border: none; }
+.contact-label { color: var(--text-muted); font-size: 13px; font-weight: 600; text-transform: uppercase; }
+.contact-value { font-size: 18px; font-weight: 700; color: #fff; }
 
         footer { padding: 60px 8%; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted); font-size: 13px; letter-spacing: 1px; }
 
@@ -360,17 +388,16 @@
         </div>
     </div>
 
-    <div class="contact-box border-cyan-500/30">
-        <div class="contact-item">
-            <span class="contact-label">Official Inquiry</span>
-            <span class="contact-value text-cyan-400">ADMIN AMDF</span>
-        </div>
-        <div class="contact-item">
-            <span class="contact-label">Direct Email</span>
-            <span class="contact-value">
-                <a href="mailto:admin@bos-ww.online" class="hover:underline text-sm md:text-base">admin@bos-ww.online</a>
-            </span>
-        </div>
+<div class="contact-box border-cyan-500/30">
+    <div class="contact-item">
+        <span class="contact-label">Official Inquiry</span>
+        <span class="contact-value text-cyan-400">ADMIN AMDF</span>
+    </div>
+    <div class="contact-item">
+        <span class="contact-label">Direct Email</span>
+        <span class="contact-value">
+            <a href="mailto:admin@bos-ww.online" style="word-break: break-word;">admin@bos-ww.online</a>
+        </span>
     </div>
 </div>
 
