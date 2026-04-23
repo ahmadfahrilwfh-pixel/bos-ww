@@ -143,7 +143,11 @@
         }
         .doc-card:hover .open-btn { background: var(--primary); color: #fff; border-color: var(--primary); }
 
-        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .contact-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Otomatis menyesuaikan jumlah box */
+    gap: 30px; 
+}
         .contact-box { padding: 50px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 35px; }
         .contact-item { padding: 20px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
         .contact-item:last-child { border: none; }
@@ -320,42 +324,46 @@
     </div>
 </section>
 
-<section id="contact">
-    <div class="tag">CONTACT PERSON</div>
-    <h2 class="section-title">Diskusi Strategis & Due Diligence</h2>
-    <p class="section-desc">
-        Untuk verifikasi dokumen asli, site visit, pembahasan joint venture,
-        akuisisi strategis, maupun kerja sama investasi jangka panjang,
-        silakan menghubungi contact person berikut.
-    </p>
-
-    <div class="contact-grid">
-        <div class="contact-box">
-            <div class="contact-item">
-                <span class="contact-label">Nama</span>
-                <span class="contact-value">BP WAWAN</span>
-            </div>
-            <div class="contact-item">
-                <span class="contact-label">WhatsApp</span>
-                <span class="contact-value">
-                    <a href="https://wa.me/628131002232" target="_blank">+62 813-1002-232</a>
-                </span>
-            </div>
+<div class="contact-grid">
+    <div class="contact-box">
+        <div class="contact-item">
+            <span class="contact-label">Nama</span>
+            <span class="contact-value">BP WAWAN</span>
         </div>
-
-        <div class="contact-box">
-            <div class="contact-item">
-                <span class="contact-label">Nama</span>
-                <span class="contact-value">BP FAKHRUDIN</span>
-            </div>
-            <div class="contact-item">
-                <span class="contact-label">WhatsApp</span>
-                <span class="contact-value">
-                    <a href="https://wa.me/6281239746692" target="_blank">+62 812-3974-6692</a>
-                </span>
-            </div>
+        <div class="contact-item">
+            <span class="contact-label">WhatsApp</span>
+            <span class="contact-value">
+                <a href="https://wa.me/628131002232" target="_blank" class="hover:text-cyan-400">+62 813-1002-232</a>
+            </span>
         </div>
     </div>
+
+    <div class="contact-box">
+        <div class="contact-item">
+            <span class="contact-label">Nama</span>
+            <span class="contact-value">BP FAKHRUDIN</span>
+        </div>
+        <div class="contact-item">
+            <span class="contact-label">WhatsApp</span>
+            <span class="contact-value">
+                <a href="https://wa.me/6281239746692" target="_blank" class="hover:text-cyan-400">+62 812-3974-6692</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="contact-box border-cyan-500/30">
+        <div class="contact-item">
+            <span class="contact-label">Official Inquiry</span>
+            <span class="contact-value text-cyan-400">ADMIN AMDF</span>
+        </div>
+        <div class="contact-item">
+            <span class="contact-label">Direct Email</span>
+            <span class="contact-value">
+                <a href="mailto:admin@bos-ww.online" class="hover:underline text-sm md:text-base">admin@bos-ww.online</a>
+            </span>
+        </div>
+    </div>
+</div>
 
     <div class="mt-10 p-6 text-center border border-dashed rounded-2xl" style="border-color: var(--border);">
         <p style="color: var(--text-muted);"><strong>Keterangan:</strong> Serious Investor Only</p>
